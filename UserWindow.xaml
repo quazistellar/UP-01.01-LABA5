@@ -1,0 +1,70 @@
+﻿<Window x:Class="UP_01._01.Laba_5.UserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UP_01._01.Laba_5"
+        mc:Ignorable="d"
+        Title="UserWindow" Height="450" Width="800" Loaded="Window_Loaded" Background="#FF612A80" Icon="пользов1.png">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Покупка гитары" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="22" Foreground="White">
+            <TextBlock.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF730581"/>
+                    <GradientStop Color="#FFD65959" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Background>
+        </TextBlock>
+
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+
+            <DataGrid IsReadOnly="true" x:Name="tovariDG" Grid.Row="1" Grid.Column="0" Background="#FFCAACE1" BorderBrush="Black"/>
+            <DataGrid IsReadOnly="true" x:Name="pokupkaDG" Grid.Row="1" Grid.Column="1" Background="#FFCAACE1" BorderBrush="Black" SelectionChanged="pokupkaDG_SelectionChanged"/>
+
+            <TextBlock Text="Выберите гитару:" FontFamily="Arial Black" FontSize="18" Foreground="White"/>
+
+            <Grid Grid.Row="2" Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="summa_tbx" Grid.Column="1"></TextBox>
+                <TextBlock x:Name="info1" Text="Введите сумму оплаты:" Grid.Column="0" FontFamily="Arial Black" Background="#FFD01515" FontSize="9"></TextBlock>
+                <Button x:Name="buy" Grid.Column="3" Content="добавить в покупку" Background="#FFD83232" FontSize="9" FontFamily="Arial Black" BorderBrush="Black" Click="buy_Click"></Button>
+
+            </Grid>
+
+            <Grid Grid.Row="2" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock x:Name="schet" Grid.Column="1" Background="#FFE72F2F" FontFamily="Arial Black"></TextBlock>
+                <Button x:Name="buy_done" Grid.Column="0" Content="Выгрузить чек" Background="#FF9911CA" BorderBrush="Black" FontFamily="Arial Black" Click="Button_Click_1"/>
+                <Button Grid.Column="2" Content="Назад" Background="#FF9911CA" BorderBrush="Black" FontFamily="Arial Black" FontSize="16" Click="Button_Click"></Button>
+            </Grid>
+        </Grid>
+
+    </Grid>
+</Window>

@@ -1,0 +1,57 @@
+﻿<Window x:Class="UP_01._01.Laba_5.AdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UP_01._01.Laba_5"
+        mc:Ignorable="d"
+        Title="AdminWindow" Height="650" Width="820" Background="#FFF6D6D0" Icon="admin1.png">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="34"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Column="0" Grid.Row="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="116"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="116"/>
+                <ColumnDefinition Width="116"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Row="0" x:Name="RoleUser" Content="Роли" BorderBrush="Black" Background="#FFEB3434" FontFamily="Arial Black" Grid.Column="1" Click="RoleUser_Click"/>
+            <Button x:Name="userdata" Content="Данные пользователей" BorderBrush="Black" FontFamily="Arial Black" FontSize="8" Grid.Column="2" Click="userdata_Click">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFBF1E1E" Offset="0.349"/>
+                        <GradientStop Color="#FF470B0B" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Button x:Name="employeeshow" Content="Сотрудники" BorderBrush="Black" Background="#FFEB3434" FontFamily="Arial Black" Grid.Column="3" Grid.Row="0" Click="employeeshow_Click"/>
+            <Button x:Name="positionsshow" Content="Должности"  Background="#FFEB3434" BorderBrush="Black" FontFamily="Arial Black" Grid.Column="4" Grid.Row="0" Click="positionsshow_Click_1"/>
+            <Button x:Name="backup_btn" Content="Бэкап" FontFamily="Arial Black" Background="#FFFF7600" BorderBrush="Black" Grid.Column="6" Grid.Row="0" Click="backup_btn_Click"/>
+            <Button Content="Назад" FontFamily="Arial Black"  Background="#FFFF7600" BorderBrush="Black" Grid.Column="0" Width="116" Grid.Row="0" HorizontalAlignment="Center" Click="Button_Click"/>
+            <Button Grid.Column="5" Content="ещё таблицы" Background="#FFF34B00" FontFamily="Arial Black" Click="Button_Click_1" BorderBrush="Black"></Button>
+
+
+        </Grid>
+        <Frame x:Name="container_pages" Grid.Column="0" Grid.Row="1" NavigationUIVisibility="Hidden"></Frame>
+
+
+    </Grid>
+</Window>

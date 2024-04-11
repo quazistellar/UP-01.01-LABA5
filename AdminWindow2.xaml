@@ -1,0 +1,55 @@
+﻿<Window x:Class="UP_01._01.Laba_5.AdminWindow2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UP_01._01.Laba_5"
+        mc:Ignorable="d"
+        Title="AdminWindow2" Height="650" Width="820" Background="#FFF6D6D0" Icon="admin1.png">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="34"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Column="0" Grid.Row="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Row="0" x:Name="VidGuitar" Content="Вид гитар" BorderBrush="Black" Background="#FFEB3434" FontFamily="Arial Black" Grid.Column="1" Click="VidGuitar_Click"/>
+            <Button x:Name="GuitarForm" Content="Форма гитар" BorderBrush="Black" FontFamily="Arial Black" FontSize="10" Grid.Column="2" Click="GuitarForm_Click" Background="#FFDF3838"/>
+
+            <Button x:Name="zvuk" Content="Звукосниматели" BorderBrush="Black" Background="#FFEB3434" FontFamily="Arial Black" Grid.Column="3" Grid.Row="0" Click="zvuk_Click" FontSize="8"/>
+            <Button x:Name="country" Content="Страна"  Background="#FFEB3434" BorderBrush="Black" FontFamily="Arial Black" Grid.Column="4" Grid.Row="0" Click="country_Click"/>
+            <Button x:Name="stringstbl" Content="Струны" FontFamily="Arial Black" Background="#FFEA4343" BorderBrush="Black" Grid.Column="5" Grid.Row="0" Click="stringstbl_Click"/>
+            <Button x:Name="back" Content="Назад" FontFamily="Arial Black"  Background="#FFFF7600" BorderBrush="Black" Grid.Column="0" Grid.Row="0" Click="Button_Click"/>
+            <Button x:Name="clients" Grid.Column="6" Content="Клиенты" Background="#FFE93F3F" FontFamily="Arial Black" Click="clients_Click" BorderBrush="Black"></Button>
+            <Button x:Name="guitars" Grid.Column="7" Content="Гитары" Background="#FFE93F3F" FontFamily="Arial Black" Click="guitars_Click" BorderBrush="Black"></Button>
+            <Button x:Name="zakazi" Grid.Column="8" Content="Заказы" Background="#FFE93F3F" FontFamily="Arial Black" Click="zakazi_Click" BorderBrush="Black"></Button>
+            <Button x:Name="statuszakaza" Grid.Column="9" Content="Статус заказа" Background="#FFE93F3F" FontFamily="Arial Black" Click="statuszakaza_Click" FontSize="9" BorderBrush="Black"></Button>
+
+        </Grid>
+        <Frame x:Name="container_pages" Grid.Column="0" Grid.Row="1" NavigationUIVisibility="Hidden"></Frame>
+
+
+    </Grid>
+</Window>
