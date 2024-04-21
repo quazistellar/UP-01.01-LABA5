@@ -108,6 +108,13 @@ namespace UP_01._01.Laba_5
                 return;
             }
 
+
+            if (write1.Text == "" || string.IsNullOrWhiteSpace(write1.Text))
+            {
+                message.Text = "Данные не могут быть пустыми";
+                return;
+            }
+
             try
             {
                 if (write1.Text != string.Empty)

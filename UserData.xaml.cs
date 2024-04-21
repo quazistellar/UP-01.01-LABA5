@@ -114,7 +114,35 @@ namespace UP_01._01.Laba_5
 
         private void edit_Click(object sender, RoutedEventArgs e)
         {
-     
+
+            if (write_log.Text.Length < 3)
+            {
+
+                MessageBox.Show("Длина логина должна быть хотя бы 3 символа", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+
+
+            }
+
+
+            if (write_pass.Text.Length < 3)
+            {
+
+                MessageBox.Show("Длина пароля должна быть хотя бы 3 символа", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+
+
+            }
+
+
+            if (write_log.Text.Trim() == "" || string.IsNullOrWhiteSpace(write_log.Text.Trim()) || write_pass.Text.Trim() == "" || (write_pass.Text.Trim() == "" && write_log.Text.Trim() == ""))
+            {
+                MessageBox.Show("Данные не могут быть пустыми");
+                return;
+            }
+
+
+
             try
             {
                 if (container_pages.SelectedItem is DataRowView selectedRow && role_cbx.SelectedItem is DataRowView selectedRole)

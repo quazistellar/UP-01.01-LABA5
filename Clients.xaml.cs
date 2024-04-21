@@ -303,7 +303,7 @@ namespace UP_01._01.Laba_5
                 }
                 else
                 {
-                    MessageBox.Show("Зпись для удаления не была выбрана!");
+                    MessageBox.Show("Запись для удаления не была выбрана!");
                 }
             }
 

@@ -22,6 +22,7 @@ namespace UP_01._01.Laba_5
     /// Логика взаимодействия для Zakazi.xaml
     /// </summary>
     public partial class Zakazi : Page
+
     {
         OrdersTableAdapter order = new OrdersTableAdapter();
 

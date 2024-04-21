@@ -89,6 +89,13 @@ namespace UP_01._01.Laba_5
 
         private void edit_admin_Click(object sender, RoutedEventArgs e)
         {
+
+            if (write1.Text.Trim().Any(c => !char.IsLetter(c) && c != ' ' && c != '-'))
+            {
+                MessageBox.Show("Нельзя вводить другие символы в название вида гитары");
+                return;
+            }
+
             if (write1.Text.Any(char.IsDigit))
             {
                 MessageBox.Show("Нельзя вводить цифры!");

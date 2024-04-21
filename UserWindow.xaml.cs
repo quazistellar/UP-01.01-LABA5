@@ -34,6 +34,10 @@ namespace UP_01._01.Laba_5
         {
             InitializeComponent();
 
+            MinHeight = 650;
+            MinWidth = 820;
+
+
             summa_pokupki = 0;
 
             tovariDG.ItemsSource = guitarsTable.GetData(); 
